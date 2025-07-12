@@ -33,18 +33,21 @@
       max-width: 150px;
       object-fit: cover;
     }
+
     .top-info {
-      display: flex;
-      justify-content: space-between;
-      align-items: stretch;
-      flex-wrap: wrap;
-      padding: 10px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
       gap: 20px;
+      padding: 10px;
     }
+
+    @media (max-width: 800px) {
+      .top-info {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
     .logo-box, .shop-image, .map-box {
-      flex: 1;
-      min-width: 250px;
-      max-width: 32%;
       background: #1f1f1f;
       border-radius: 10px;
       padding: 15px;
@@ -54,6 +57,7 @@
       align-items: center;
       justify-content: center;
     }
+
     .logo-box img {
       width: 100%;
       height: 100%;
@@ -62,6 +66,7 @@
       user-select: none;
       pointer-events: none;
     }
+
     .shop-image img, .map-box iframe {
       width: 100%;
       height: 100%;
@@ -69,9 +74,11 @@
       object-fit: cover;
       border-radius: 10px;
     }
+
     .divider {
       height: 30px;
     }
+
     .cards-banner {
       text-align: center;
       background: #1f1f1f;
@@ -83,24 +90,13 @@
       color: var(--blue);
     }
 
-    /* ✅ Responsive Cards Grid */
     .cards {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
       gap: 24px;
       padding: 20px;
+      max-width: 1200px;
       margin: auto;
-      max-width: 1000px;
-      justify-content: center;
-    }
-
-    @media (max-width: 800px) {
-      .cards {
-        grid-template-columns: repeat(2, 1fr);
-        max-width: 100%;
-        padding: 10px;
-        gap: 16px;
-      }
     }
 
     .card {
@@ -113,10 +109,12 @@
       background: #1f1f1f;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
+
     .card:hover {
       transform: scale(1.05);
       box-shadow: 0 4px 12px rgba(255, 144, 194, 0.4);
     }
+
     .card img {
       width: 100%;
       height: 100%;
@@ -124,6 +122,7 @@
       display: block;
       transition: opacity 0.3s ease;
     }
+
     .card span {
       position: absolute;
       bottom: 5px;
@@ -135,6 +134,7 @@
       border-radius: 5px;
       color: #121212;
     }
+
     footer {
       margin-top: 50px;
       padding: 30px 60px;
@@ -143,16 +143,19 @@
       border-top-left-radius: 20px;
       border-top-right-radius: 20px;
     }
+
     .footer-grid {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       gap: 30px;
     }
+
     .footer-left, .footer-right {
       flex: 1;
       min-width: 250px;
     }
+
     .email-form input[type="email"] {
       padding: 10px;
       border-radius: 5px;
@@ -161,6 +164,7 @@
       max-width: 80%;
       margin-right: 10px;
     }
+
     .email-form button {
       padding: 10px 20px;
       background-color: var(--blue);
@@ -170,6 +174,7 @@
       cursor: pointer;
       font-weight: bold;
     }
+
     .email-form button:hover {
       background-color: var(--pink);
     }
@@ -219,27 +224,9 @@
 
   <script>
     const items = [
-      "img",
-      "img",
-      "item03",
-      "item04",
-      "img",
-      "item06",
-      "item07",
-      "item08",
-      "item09",
-      "item10",
-      "item11",
-      "item12",
-      "item13",
-      "item14",
-      "item15",
-      "item16",
-      "item17",
-      "item18",
-      "item19",
-      "item20",
-      "item21",
+      "img", "img", "item03", "item04", "img", "item06", "item07", "item08",
+      "item09", "item10", "item11", "item12", "item13", "item14", "item15",
+      "item16", "item17", "item18", "item19", "item20", "item21",
     ];
 
     const container = document.getElementById("cards-container");
