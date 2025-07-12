@@ -1,171 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Shop Website</title>
-  <style>
-    :root {
-      --pink: #ff90c2;
-      --blue: #90e0ff;
-    }
-    body {
-      font-family: sans-serif;
-      margin: 0 auto;
-      padding: 0;
-      background: #121212;
-      color: #e0e0e0;
-      max-width: 1200px;
-    }
-    a {
-      color: var(--blue);
-    }
-    a:hover {
-      color: var(--pink);
-    }
-
-    .top-info {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      padding: 10px;
-    }
-    @media (max-width: 800px) {
-      .top-info {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    .logo-box, .shop-image, .map-box {
-      background: #1f1f1f;
-      padding: 15px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.4);
-      box-sizing: border-box;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      /* NO border-radius as requested */
-    }
-
-    .logo-box img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      aspect-ratio: 1 / 1;
-      user-select: none;
-      pointer-events: none;
-    }
-
-    .shop-image img, .map-box iframe {
-      width: 100%;
-      height: 100%;
-      aspect-ratio: 1 / 1;
-      object-fit: cover;
-      /* no border-radius */
-      border: none;
-    }
-
-    .divider {
-      height: 30px;
-    }
-
-    .cards-banner {
-      text-align: center;
-      background: #1f1f1f;
-      padding: 30px 10px;
-      font-size: 1.6em;
-      font-weight: bold;
-      /* no border-radius */
-      margin: 20px;
-      color: var(--blue);
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
-      padding: 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
-    @media (max-width: 800px) {
-      .cards {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    .card {
-      position: relative;
-      overflow: hidden;
-      aspect-ratio: 1 / 1;
-      cursor: pointer;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
-      background: #1f1f1f;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      /* no border-radius */
-    }
-    .card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 4px 12px rgba(255, 144, 194, 0.4);
-    }
-    .card img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: opacity 0.3s ease;
-    }
-    .card span {
-      position: absolute;
-      bottom: 5px;
-      left: 5px;
-      background: var(--pink);
-      font-weight: bold;
-      font-size: 1.4em;
-      padding: 4px 8px;
-      border-radius: 5px;
-      color: #121212;
-    }
-
-    footer {
-      margin-top: 50px;
-      padding: 30px 60px;
-      background: #1f1f1f;
-      border-top: 2px solid #333;
-      border-top-left-radius: 20px;
-      border-top-right-radius: 20px;
-    }
-    .footer-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 30px;
-    }
-    .footer-left, .footer-right {
-      flex: 1;
-      min-width: 250px;
-    }
-    .email-form input[type="email"] {
-      padding: 10px;
-      border-radius: 5px;
-      border: none;
-      width: 300px;
-      max-width: 80%;
-      margin-right: 10px;
-    }
-    .email-form button {
-      padding: 10px 20px;
-      background-color: var(--blue);
-      color: #121212;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-    .email-form button:hover {
-      background-color: var(--pink);
-    }
-  </style>
+  <meta name="author" content="Mateo" />
+  <meta name="description" content="Egy informatív honlap Kincses Sziget nevü ajándékbolthoz." />
+  <meta name="keywords" content="nyár,balaton,mágnes,ajándék,ajándékbolt,bolt" />
+  <meta http-equiv="Content-Language" content="hu" />
+  <link rel="icon" href="favicon.png" type="image/png" />
+  <title>Kincses Sziget</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="top-info">
@@ -188,59 +32,28 @@
 
   <div class="divider"></div>
 
-  <div class="cards-banner">Product Groups</div>
+  <div class="cards-banner">Termék Csoportok</div>
 
   <div class="cards" id="cards-container"></div>
 
   <footer>
     <div class="footer-grid">
       <div class="footer-left">
-        <h3>Contact Us</h3>
-        <p><strong>Phone:</strong> +36 20 123 4567</p>
-        <p><strong>Email:</strong> <a href="mailto:shop@example.com">shop@example.com</a></p>
-        <p><strong>Address:</strong> valahol itt</p>
+        <h3>Lépjen kapcsolatba velünk:</h3>
+        <p><strong>Telefon:</strong> +36 20 240 3949</p>
+        <p><strong>Email:</strong> <a href="mailto:kincsessziget2011@gmail.com">kincsessziget2011@gmail.com</a></p>
+        <p><strong>Address:</strong> 8647 Balatonmáriafürdő Gróf Széchenyi Imre tér 6.</p>
       </div>
       <div class="footer-right">
-        <p><strong>Description:</strong> Local store for daily goods, open 8–18h.</p>
+        <p><strong>Leírás:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, possimus. Velit culpa ducimus ipsa reiciendis excepturi. Quaerat aut, dolorum aspernatur minima neque consequatur quo minus. Eaque perspiciatis porro voluptatibus quis?</p>
       </div>
     </div>
-    <p style="margin-top: 20px; font-size: 0.9em; text-align: center;">
-      © 2025 Shop Name. All rights reserved.
+    <br>
+    <p style="margin-top: 20px; font-size: 0.9em; text-align: center; color: rgba(224, 224, 224, 0.3);">
+      © 2025 Kincses Sziget. All rights reserved.
     </p>
   </footer>
 
-  <script>
-    const items = [
-      "img", "img", "item03", "item04", "img", "item06", "item07", "item08",
-      "item09", "item10", "item11", "item12", "item13", "item14", "item15",
-      "item16", "item17", "item18", "item19", "item20", "item21",
-    ];
-
-    const container = document.getElementById("cards-container");
-
-    items.forEach((name) => {
-      const card = document.createElement("div");
-      card.className = "card";
-
-      const img = document.createElement("img");
-      img.src = `img/def/${name}.jpeg`;
-      img.alt = name;
-      img.loading = "lazy";
-
-      const label = document.createElement("span");
-      label.textContent = name;
-      card.appendChild(label);
-      card.appendChild(img);
-
-      card.addEventListener("mouseover", () => {
-        img.src = `img/alt/${name}.jpeg`;
-      });
-      card.addEventListener("mouseout", () => {
-        img.src = `img/def/${name}.jpeg`;
-      });
-
-      container.appendChild(card);
-    });
-  </script>
+  <script src="main.js"></script>
 </body>
 </html>
