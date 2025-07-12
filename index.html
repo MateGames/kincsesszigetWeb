@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Shop Website</title>
   <style>
     :root {
@@ -23,16 +23,6 @@
     a:hover {
       color: var(--pink);
     }
-    header {
-      text-align: center;
-      padding: 20px;
-    }
-    header img {
-      width: 100%;
-      height: auto;
-      max-width: 150px;
-      object-fit: cover;
-    }
 
     .top-info {
       display: grid;
@@ -40,7 +30,6 @@
       gap: 20px;
       padding: 10px;
     }
-
     @media (max-width: 800px) {
       .top-info {
         grid-template-columns: repeat(2, 1fr);
@@ -49,13 +38,13 @@
 
     .logo-box, .shop-image, .map-box {
       background: #1f1f1f;
-      border-radius: 10px;
       padding: 15px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.4);
       box-sizing: border-box;
       display: flex;
       align-items: center;
       justify-content: center;
+      /* NO border-radius as requested */
     }
 
     .logo-box img {
@@ -72,7 +61,8 @@
       height: 100%;
       aspect-ratio: 1 / 1;
       object-fit: cover;
-      border-radius: 10px;
+      /* no border-radius */
+      border: none;
     }
 
     .divider {
@@ -85,36 +75,39 @@
       padding: 30px 10px;
       font-size: 1.6em;
       font-weight: bold;
-      border-radius: 10px;
+      /* no border-radius */
       margin: 20px;
       color: var(--blue);
     }
 
     .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+      grid-template-columns: repeat(4, 1fr);
       gap: 24px;
       padding: 20px;
       max-width: 1200px;
       margin: auto;
+    }
+    @media (max-width: 800px) {
+      .cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
     .card {
       position: relative;
       overflow: hidden;
       aspect-ratio: 1 / 1;
-      border-radius: 10px;
       cursor: pointer;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
       background: #1f1f1f;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
+      /* no border-radius */
     }
-
     .card:hover {
       transform: scale(1.05);
       box-shadow: 0 4px 12px rgba(255, 144, 194, 0.4);
     }
-
     .card img {
       width: 100%;
       height: 100%;
@@ -122,7 +115,6 @@
       display: block;
       transition: opacity 0.3s ease;
     }
-
     .card span {
       position: absolute;
       bottom: 5px;
@@ -143,19 +135,16 @@
       border-top-left-radius: 20px;
       border-top-right-radius: 20px;
     }
-
     .footer-grid {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       gap: 30px;
     }
-
     .footer-left, .footer-right {
       flex: 1;
       min-width: 250px;
     }
-
     .email-form input[type="email"] {
       padding: 10px;
       border-radius: 5px;
@@ -164,7 +153,6 @@
       max-width: 80%;
       margin-right: 10px;
     }
-
     .email-form button {
       padding: 10px 20px;
       background-color: var(--blue);
@@ -174,7 +162,6 @@
       cursor: pointer;
       font-weight: bold;
     }
-
     .email-form button:hover {
       background-color: var(--pink);
     }
