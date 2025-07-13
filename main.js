@@ -1,5 +1,5 @@
 const items = [
-    "Hűtőmágnes", "Strand Játék", "Gyerek Játék", "Ékszer, karkötő", "Üditő","Kártya","Plüss", "Könyv", "Névre szóló ajándék","Díszbor, Pálinka", "Fürdőruha", "Egzotikus ajándék", "Magyaros ajándék", "Pénztárca", "Levendulás termék", "Napszemüveg","Vicces ajándék", "Gyerek ruha", "Képeslap", "Parfüm, Körömlakk", "Sapka, Kalap", "Kulcstartó",
+    "Hűtőmágnes", "Strand Játék", "Gyerek Játék", "Ékszer, karkötő", "Üditő","Kártya","Plüss", "Könyv", "Névre szóló ajándék","Díszbor, Pálinka", "Fürdőruha", "Egzotikus ajándék", "Magyaros ajándék", "Pénztárca", "Levendulás termék", "Napszemüveg","Vicces ajándék", "Gyerek ruha", "Képeslap"/*, "Parfüm, Körömlakk", "Sapka, Kalap", "Kulcstartó",*/
 ];
 
 const container = document.getElementById("cards-container");
