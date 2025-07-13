@@ -1,7 +1,5 @@
 const items = [
-    "img", "img", "item03", "item04", "img", "item06", "item07", "item08",
-    "item09", "item10", "item11", "item12", "item13", "item14", "item15",
-    "item16", "item17", "item18", "item19", "item20", "item21",
+    "Hűtőmágnes", "Strand Játék", "Gyerek Játék", "Ékszer, karkötő", "Üditő","Kártya","Plüss", "Könyv", "Névre szóló ajándék","Díszbor, Pálinka", "Fürdőruha", "Egzotikus ajándék", "Magyaros ajándék", "Pénztárca", "Levendulás termék", "Napszemüveg","Vicces ajándék", "Gyerek ruha", "Képeslap", "Parfüm, Körömlakk", "Sapka, Kalap", "Kulcstartó",
 ];
 
 const container = document.getElementById("cards-container");
@@ -11,7 +9,7 @@ items.forEach((name) => {
     card.className = "card";
 
     const img = document.createElement("img");
-    img.src = `img/def/${name}.jpeg`;
+    img.src = `img/def/${name}.jpg`;
     img.alt = name;
     img.loading = "lazy";
 
@@ -21,10 +19,10 @@ items.forEach((name) => {
     card.appendChild(img);
 
     card.addEventListener("mouseover", () => {
-        img.src = `img/alt/${name}.jpeg`;
+        img.src = `img/alt/${name}.jpg`;
     });
     card.addEventListener("mouseout", () => {
-        img.src = `img/def/${name}.jpeg`;
+        img.src = `img/def/${name}.jpg`;
     });
 
     container.appendChild(card);
